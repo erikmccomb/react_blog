@@ -6,15 +6,16 @@ import {addEntry} from '../actions/entries';
 // Class because the form will have state
 class EntryForm extends React.Component {
   state = {
-    title: ''
+    title: '',
+    description: ''
   }
 
   onTitleChange = (e) => {
     this.setState({title: e.target.value});
   }
   
-  onChange = (e) => {
-    this.setState({title: e.target.value});
+  onDescriptionChange = (e) => {
+    this.setState({description: e.target.value});
   }
   
   onChange = (e) => {

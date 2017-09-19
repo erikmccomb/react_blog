@@ -23,6 +23,7 @@ const Entry = ( {id, title, description, complete, dispatch} ) => (
     }
     : styles.entry}>
     {title}
+    {description}
   </li>
 )
 

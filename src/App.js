@@ -7,9 +7,9 @@ import Footer from './components/Footer';
 // function
 const App = () => (
   <div>
-    <EntryForm/>
-    <EntryList/>
-    <Footer/>
+    <EntryForm />
+    <EntryList />
+    <Footer />
   </div>
 )
 
