@@ -12,7 +12,8 @@ const viewable = (entries, currentFilter) => {
       return entries.filter(t => !t.complete)
     case 'Completed':
       return entries.filter(t => t.complete)
-    
+    default:
+     return entries;
   }
 }
 
