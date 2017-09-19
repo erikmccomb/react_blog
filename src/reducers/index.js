@@ -7,6 +7,6 @@ import todos from './todos';
 import nextId from './nextId';
 import filter from './filter';
 
-const rootReducer = combineReducers({todos, nextId, filter});
+const rootReducer = combineReducers({entriess, nextId, filter});
 
 export default rootReducer;
