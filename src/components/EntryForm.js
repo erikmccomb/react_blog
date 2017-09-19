@@ -6,20 +6,31 @@ import {addEntry} from '../actions/entries';
 // Class because the form will have state
 class EntryForm extends React.Component {
   state = {
-    name: ''
+    title: ''
   }
 
-  onChange = (e) => {
-    this.setState({name: e.target.value});
+  onTitleChange = (e) => {
+    this.setState({title: e.target.value});
   }
+  
+  onChange = (e) => {
+    this.setState({title: e.target.value});
+  }
+  
+  onChange = (e) => {
+    this.setState({title: e.target.value});
+  }
+  
   handleSubmit = (e) => {
     // stop the form from behaving as a form, and use the below JS instead.
     e.preventDefault();
-    // Get name from input
-    let name = this.state.name;
+    // Get title from input
+    let title = this.state.title;
+    let description = this.state.description;
     let {dispatch, id} = this.props;
     let entry = {
-      name,
+      title,
+      description,
       id,
       complete: false
     }
@@ -27,13 +38,15 @@ class EntryForm extends React.Component {
     dispatch(addEntry(entry));
     dispatch(incId())
     // Clear input
-    this.setState({name: ''})
+    this.setState({title: '', description: ''}) 
   }
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input value ={this.state.name} onChange={this.onChange}/>
+        <input value ={this.state.title} onChange={this.onTitleChange} placeholder={'Title'}/>
+        <br/>
+        <input value ={this.state.description} onChange={this.onDescriptionChange} placeholder={'Body'}/>
       </form>
     )
   }

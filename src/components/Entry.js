@@ -12,7 +12,7 @@ const styles = {
   }
 }
 
-const Entry = ( {id, name, complete, dispatch} ) => (
+const Entry = ( {id, title, description, complete, dispatch} ) => (
   <li onClick={ () => dispatch(toggleEntry(id)) } 
   // if complete true, it will combine styles.entry with styles.complete,
   // otherwise, just a regular styling will be used.
@@ -22,7 +22,7 @@ const Entry = ( {id, name, complete, dispatch} ) => (
       ...styles.entry
     }
     : styles.entry}>
-    {name}
+    {title}
   </li>
 )
 
