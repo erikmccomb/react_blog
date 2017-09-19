@@ -48,6 +48,7 @@ class EntryForm extends React.Component {
         <input value ={this.state.title} onChange={this.onTitleChange} placeholder={'Title'}/>
         <br/>
         <input value ={this.state.description} onChange={this.onDescriptionChange} placeholder={'Body'}/>
+        <input type = "submit" value = "Submit"/>
       </form>
     )
   }

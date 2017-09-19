@@ -17,7 +17,7 @@ const viewable = (entries, currentFilter) => {
   }
 }
 
-// We need to pass {entries} props, and they will be passed in a nd rendered.
+// We need to pass {entries} props, and they will be passed in and rendered.
 const EntryList = ({entries, filter}) => (
   <ul>
     {viewable(entries, filter).map(t => <Entry {...t} key={t.id}/>)}
