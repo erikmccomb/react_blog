@@ -2,11 +2,11 @@
 // import multiple.
 import {combineReducers} from 'redux';
 //import the reducers to be combined.
-import todos from './todos';
+import entries from './entries';
 // awlways add new reducers to import first
 import nextId from './nextId';
 import filter from './filter';
 
-const rootReducer = combineReducers({entriess, nextId, filter});
+const rootReducer = combineReducers({entries, nextId, filter});
 
 export default rootReducer;
