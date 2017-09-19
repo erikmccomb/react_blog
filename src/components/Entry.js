@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {toggleTodo} from '../actions/entries';
+import {toggleEntry} from '../actions/entries';
 
 const styles = {
   complete: {
