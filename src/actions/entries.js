@@ -1,7 +1,7 @@
-export const addTodo = (todo) => {
-  return {type: 'ADD_TODO', todo}
+export const addEntry = (entry) => {
+  return {type: 'ADD_TODO', entry}
 }
 
-export const toggleTodo = (id) => {
+export const toggleEntry = (id) => {
   return {type: 'TOGGLE_TODO', id}
 }
